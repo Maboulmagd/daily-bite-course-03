@@ -76,7 +76,8 @@
         "cctype": "cpp",
         "clocale": "cpp",
         "cwctype": "cpp",
-        "numbers": "cpp"
+        "numbers": "cpp",
+        "istream": "cpp"
     },
     "bazel.queriesShareServer": true,
 }

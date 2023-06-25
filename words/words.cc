@@ -17,14 +17,17 @@ std::vector<std::string> to_words(std::string text) {
   std::string word;
 
   for (const char &c : text) {
-    if (c == ' ') {
-      words.push_back(word);
+    if (c != ' ') {
+      word += c;
+    } else {
+      if (!word.empty()) {
+        words.push_back(word);
+      } // word could be empty here...
       word.clear();
     }
-
-    else {
-      word += c;
-    }
+  }
+  if (!word.empty()) { // Last word
+    words.push_back(word);
   }
 
   return words;
